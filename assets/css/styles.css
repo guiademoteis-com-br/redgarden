@@ -67,6 +67,7 @@ a:hover {
   text-align: right;
 }
 
+.title-header h1,
 .title-header h2 {
   color: #F6A1C9;
   font-weight: 700;
@@ -78,6 +79,7 @@ a:hover {
   font-family: "Helvetica Neue Bold", sans-serif;
 }
 
+.title-header h1 span,
 .title-header h2 span {
   display: block;
   width: 29px;
@@ -93,12 +95,14 @@ a:hover {
   align-items: center;
 }
 
+.title-header h1 span strong,
 .title-header h2 span strong {
   width: 23px;
   height: 29px;
   display: block;
 }
 
+.title-header h1::after,
 .title-header h2::after {
   content: "";
   width: 80px;
@@ -402,15 +406,18 @@ a:hover {
   padding: 0;
 }
 
+.destaque .title-header h1,
 .destaque .title-header h2 {
   color: #F6A1C9;
 }
 
+.destaque .title-header h1 span,
 .destaque .title-header h2 span {
   background-color: #F6A1C9;
   color: #7F234D;
 }
 
+.destaque .title-header h1::after,
 .destaque .title-header h2::after {
   background-color: #F6A1C9;
 }
@@ -622,6 +629,7 @@ a:hover {
 }
 
 .promo__header h2 span strong,
+.Hotel__header h1 span strong,
 .Hotel__header h2 span strong {
   width: 20px;
 }

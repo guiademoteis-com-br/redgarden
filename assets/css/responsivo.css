@@ -115,6 +115,7 @@
     margin: 0 calc(8px / 2);
   }
 
+  .title-header h1,
   .title-header h2 {
     width: 100%;
     text-align: center;
@@ -123,6 +124,7 @@
     white-space: nowrap;
   }
 
+  .title-header h1::before,
   .title-header h2::before {
     content: "";
     width: 100%;
@@ -132,11 +134,13 @@
     background-color: #F6A1C9;
   }
 
+  .title-header h1::after,
   .title-header h2::after {
     width: 100%;
     margin-left: 24px;
   }
 
+  .destaque .title-header h1::before,
   .destaque .title-header h2::before {
     background-color: #F6A1C9;
   }
@@ -396,3 +400,7 @@
     margin-top: 12px;
   }
 }
+  .title-header h1.title {
+    white-space: normal;
+    line-height: 1.2;
+  }
