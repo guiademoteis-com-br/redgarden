@@ -1,0 +1,31 @@
+name: Deploy via FTP
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-ftp
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Enviar arquivos via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Pasta no servidor, terminando com "/" (ex.: public_html/). Padrão: raiz do FTP.
+          server-dir: ${{ secrets.FTP_SERVER_DIR || './' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            .gitignore
