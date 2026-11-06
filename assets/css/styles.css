@@ -118,7 +118,7 @@ a:hover {
   position: fixed;
   top: 41px;
   left: 6px;
-  width: 94px;
+  width: auto;
   z-index: 99;
   color: #fff;
   margin: 0;
@@ -138,23 +138,64 @@ a:hover {
   height: 80px;
 }
 
+.menu__navigation-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-left: 22px;
+}
+
 .menu__navigation-list .navbar-toggler {
-  width: 100%;
+  order: -1;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 0;
-  padding: 10px;
+  padding: 10px 0;
+  cursor: pointer;
 }
 
 .nav-hamb {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 5px;
+}
+
+.nav-hamb .menu__nav--icon:nth-child(n) {
+  position: relative;
+  bottom: 0;
 }
 
 .menu__navigation-list .navbar-toggler p {
   display: none;
+}
+
+.menu__reservar,
+.menu__reservar:hover,
+.menu__reservar:focus {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: #F6A1C9;
+  color: #16060D;
+  font-family: "Helvetica Neue Bold", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.menu__reservar:hover {
+  background: #f8b6d5;
+}
+
+.menu__reservar svg {
+  flex-shrink: 0;
 }
 
 .menu__nav--icon {
